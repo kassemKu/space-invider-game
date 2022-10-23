@@ -450,7 +450,7 @@ canvas.addEventListener('touchend', (e) => {
     keys.ArrowRight.pressed = false;
   }
 })
-canvas.addEventListener('touchcancel', (e) => {
+canvas.addEventListener('touchcancel', () => {
   e.preventDefault()
   if(e.x < innerWidth) {
     keys.ArrowLeft.pressed = false;
