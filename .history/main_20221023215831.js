@@ -433,26 +433,12 @@ addEventListener('keyup', ({ key }) => {
   }
 });
 
-canvas.addEventListener('touchstart', (e) => {
-  if(e.x < innerWidth) {
+document.onclick = (e) => {
+  if(e.x < innerWidth / 2)  {
     keys.ArrowLeft.pressed = true;
   } else {
     keys.ArrowRight.pressed = true;
   }
-})
-
-canvas.addEventListener('touchend', () => {
-  if(e.x < innerWidth) {
-    keys.ArrowLeft.pressed = false;
-  } else {
-    keys.ArrowRight.pressed = false;
-  }
-})
-canvas.addEventListener('touchcancel', () => {
-  console.log('touchcancel');
-})
-canvas.addEventListener('touchmove', () => {
-  console.log('touchmove');
-})
+}
 
 player.update();
